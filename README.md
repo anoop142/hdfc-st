@@ -34,7 +34,7 @@ A command-line tool to print data from HDFC bank CSV statement files.
     * Between dates
 
 * Table formatted
-* Print only credits and debits
+* Show credits, debits and net
 
 
 ## Example
