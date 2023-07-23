@@ -10,7 +10,7 @@ A command-line tool to print data from HDFC bank CSV statement files.
   -cred
     	print credits
   -d value
-    	description to match
+    	description to match, comma separated
   -deb
     	print debits
   -f string
@@ -24,15 +24,15 @@ A command-line tool to print data from HDFC bank CSV statement files.
   -to value
     	transactions till specified date
   -x value
-    	description to exclude
+    	descriptions to exclude, comma separated
 
 ```
 
 ## Features
 
 * Filter by
-    * Matching description
-    * Excluding description
+    * Matching description(case-insensitive)
+    * Excluding description(case-insensitive)
     * On specific date
     * Between dates
 
@@ -43,7 +43,7 @@ A command-line tool to print data from HDFC bank CSV statement files.
 ## Example
 
 ```
-hdfc-st -f statement.txt -from 20/07/2023 -to 22/07/2023 
+hdfc-st -f statement.txt -from 20/07/2023 -to 22/07/2023 -d "swiggy"
 
 ```
 
