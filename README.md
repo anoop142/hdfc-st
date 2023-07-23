@@ -1,6 +1,9 @@
 # hdfc-st
 A command-line tool to print data from HDFC bank CSV statement files.
 
+
+![example](docs/example.png)
+
 ## Usage:
 ```
 ./hdfc-st -f file | - [-d text to match] [-x text to exclude] [-on dd/mm/yyyy] | [-from -after dd/mm/yyyy]
