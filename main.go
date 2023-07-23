@@ -170,15 +170,14 @@ func main() {
 	flag.BoolVar(&cfg.cred, "cred", false, "print credits")
 	flag.BoolVar(&cfg.deb, "deb", false, "print debits")
 	flag.BoolVar(&cfg.net, "net", false, "print net")
-	flag.Func("d", "description to match", func(value string) error {
+	flag.Func("d", "descriptions to match", func(value string) error {
 		for _, v := range strings.Split(value, ",") {
 			cfg.descriptions = append(cfg.descriptions, strings.ToUpper(strings.TrimSpace(v)))
 		}
-
 		return nil
 	})
 
-	flag.Func("x", "description to exclude", func(value string) error {
+	flag.Func("x", "descriptions to exclude", func(value string) error {
 		for _, v := range strings.Split(value, ",") {
 			cfg.exclude = append(cfg.exclude, strings.ToUpper(strings.TrimSpace(v)))
 		}
